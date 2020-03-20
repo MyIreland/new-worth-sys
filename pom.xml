@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.worth</groupId>
+        <artifactId>worth-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>nw-sys</artifactId>
+
+    <properties>
+        <worth-mysql.version>1.0-SNAPSHOT</worth-mysql.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>cn.worth</groupId>
+            <artifactId>worth-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.worth</groupId>
+            <artifactId>worth-mysql</artifactId>
+            <version>${worth-mysql.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
