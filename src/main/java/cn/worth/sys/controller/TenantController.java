@@ -2,12 +2,12 @@ package cn.worth.sys.controller;
 
 import cn.worth.common.annotation.CurrentUser;
 import cn.worth.common.constant.CommonConstant;
-import cn.worth.common.domain.LoginUser;
+import cn.worth.common.domain.R;
 import cn.worth.common.utils.StringUtils;
+import cn.worth.core.domain.LoginUser;
 import cn.worth.mysql.controller.BaseController;
 import cn.worth.sys.domain.Tenant;
 import cn.worth.sys.service.ITenantService;
-import cn.worth.common.domain.R;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;

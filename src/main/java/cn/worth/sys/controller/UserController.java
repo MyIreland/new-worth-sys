@@ -2,10 +2,11 @@ package cn.worth.sys.controller;
 
 import cn.worth.common.annotation.CurrentUser;
 import cn.worth.common.constant.CommonConstant;
-import cn.worth.common.domain.LoginUser;
 import cn.worth.common.domain.R;
 import cn.worth.common.utils.StringUtils;
+import cn.worth.core.domain.LoginUser;
 import cn.worth.mysql.controller.BaseController;
+import cn.worth.redis.utils.RedisClient;
 import cn.worth.sys.domain.User;
 import cn.worth.sys.pojo.UserPojo;
 import cn.worth.sys.service.IRoleService;
@@ -25,7 +26,7 @@ import java.util.List;
  * @Modified by:
  */
 @RestController
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController extends BaseController<IUserService, User> {
 
     @Autowired
@@ -34,16 +35,19 @@ public class UserController extends BaseController<IUserService, User> {
     @Autowired
     private IRoleService roleService;
 
-    @PostMapping("page")
-    public R page(Page<User> userPage, User user, @CurrentUser LoginUser loginUser) {
+    @Autowired
+    private RedisClient redisClient;
 
+    @PostMapping("/page")
+    public R page(Page<User> userPage, User user, @CurrentUser LoginUser loginUser) {
+        System.out.println(redisClient);
         QueryWrapper<User> entityWrapper = getUserEntityWrapper(user, loginUser);
 
         Page<User> page = userService.page(userPage, entityWrapper);
         return R.success(page);
     }
 
-    @PostMapping("editSelfInfo")
+    @PostMapping("/editSelfInfo")
     public R editSelfInfo(@RequestBody User user, @CurrentUser LoginUser loginUser) {
         return userService.editSelfInfo(user);
     }
@@ -73,7 +77,7 @@ public class UserController extends BaseController<IUserService, User> {
         return entityWrapper;
     }
 
-    @GetMapping("{userId}")
+    @GetMapping("/{userId}")
     public R get(@PathVariable Long userId) {
         User data = userService.getById(userId);
         if(null != data){
@@ -97,22 +101,22 @@ public class UserController extends BaseController<IUserService, User> {
         return userService.addOrUpdate(userPojo, userVO);
     }
 
-    @DeleteMapping("{userId}")
+    @DeleteMapping("/{userId}")
     public R del(@PathVariable Long userId) {
         return userService.del(userId);
     }
 
-    @PostMapping("batchDel")
+    @PostMapping("/batchDel")
     public R batchDel(@RequestBody List<Long> ids) {
         return userService.batchDel(ids);
     }
 
-    @PostMapping("lockUser")
+    @PostMapping("/lockUser")
     public R lockUser(@PathVariable Long userId) {
         return userService.lockUser(userId);
     }
 
-    @PostMapping("unLockUser")
+    @PostMapping("/unLockUser")
     public R unLockUser(@PathVariable Long userId) {
         return userService.unLockUser(userId);
     }

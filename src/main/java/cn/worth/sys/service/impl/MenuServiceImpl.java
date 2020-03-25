@@ -1,7 +1,7 @@
 package cn.worth.sys.service.impl;
 
-import cn.worth.common.domain.MenuVO;
 import cn.worth.common.utils.CollectionUtils;
+import cn.worth.core.domain.MenuVO;
 import cn.worth.sys.domain.Menu;
 import cn.worth.sys.mapper.MenuMapper;
 import cn.worth.sys.service.IMenuService;

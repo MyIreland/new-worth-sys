@@ -12,19 +12,19 @@
     <artifactId>worth-sys</artifactId>
 
     <properties>
-        <worth-mysql.version>1.0-SNAPSHOT</worth-mysql.version>
+        <worth-oauth2.version>1.0-SNAPSHOT</worth-oauth2.version>
     </properties>
 
     <dependencies>
 
         <dependency>
             <groupId>cn.worth</groupId>
-            <artifactId>worth-core</artifactId>
+            <artifactId>worth-oauth2</artifactId>
+            <version>${worth-oauth2.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.worth</groupId>
-            <artifactId>worth-mysql</artifactId>
-            <version>${worth-mysql.version}</version>
+            <artifactId>worth-redis</artifactId>
         </dependency>
     </dependencies>
 

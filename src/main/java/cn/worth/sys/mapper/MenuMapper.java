@@ -1,9 +1,10 @@
 package cn.worth.sys.mapper;
 
-import cn.worth.common.domain.MenuVO;
+import cn.worth.core.domain.MenuVO;
 import cn.worth.sys.domain.Menu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 /**

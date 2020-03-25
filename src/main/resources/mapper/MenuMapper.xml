@@ -19,13 +19,13 @@
             </foreach>
         </if>
     </sql>
-    <select id="findPermsByRoleIds" resultType="cn.worth.common.domain.MenuVO">
+    <select id="findPermsByRoleIds" resultType="cn.worth.core.domain.MenuVO">
         <include refid="findMenuBaseSql"/>
         ORDER BY
           m.sort
     </select>
 
-    <select id="findMenusByRoleIds" resultType="cn.worth.common.domain.MenuVO">
+    <select id="findMenusByRoleIds" resultType="cn.worth.core.domain.MenuVO">
 
         <include refid="findMenuBaseSql"/>
         AND m.TYPE != 2

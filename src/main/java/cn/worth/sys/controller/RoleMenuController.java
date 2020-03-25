@@ -1,8 +1,8 @@
 package cn.worth.sys.controller;
 
 import cn.worth.common.annotation.CurrentUser;
-import cn.worth.common.domain.LoginUser;
 import cn.worth.common.domain.R;
+import cn.worth.core.domain.LoginUser;
 import cn.worth.sys.param.BindRoleMenuParam;
 import cn.worth.sys.service.IRoleMenuService;
 import org.springframework.beans.factory.annotation.Autowired;

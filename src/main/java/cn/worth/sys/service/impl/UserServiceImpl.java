@@ -1,12 +1,12 @@
 package cn.worth.sys.service.impl;
 
 import cn.worth.common.constant.CommonConstant;
-import cn.worth.common.domain.LoginUser;
-import cn.worth.common.enums.RCodeEnum;
 import cn.worth.common.domain.R;
+import cn.worth.common.enums.RCodeEnum;
 import cn.worth.common.enums.UserStateEnum;
 import cn.worth.common.exception.BusinessException;
 import cn.worth.common.utils.StringUtils;
+import cn.worth.core.domain.LoginUser;
 import cn.worth.sys.domain.User;
 import cn.worth.sys.enums.EntityTypeEnum;
 import cn.worth.sys.mapper.UserMapper;
@@ -20,6 +20,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;

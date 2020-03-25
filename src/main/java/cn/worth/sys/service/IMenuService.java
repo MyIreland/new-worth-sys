@@ -1,6 +1,6 @@
 package cn.worth.sys.service;
 
-import cn.worth.common.domain.MenuVO;
+import cn.worth.core.domain.MenuVO;
 import cn.worth.sys.domain.Menu;
 import com.baomidou.mybatisplus.extension.service.IService;
 
