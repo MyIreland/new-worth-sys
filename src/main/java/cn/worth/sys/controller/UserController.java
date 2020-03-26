@@ -35,12 +35,8 @@ public class UserController extends BaseController<IUserService, User> {
     @Autowired
     private IRoleService roleService;
 
-    @Autowired
-    private RedisClient redisClient;
-
     @PostMapping("/page")
     public R page(Page<User> userPage, User user, @CurrentUser LoginUser loginUser) {
-        System.out.println(redisClient);
         QueryWrapper<User> entityWrapper = getUserEntityWrapper(user, loginUser);
 
         Page<User> page = userService.page(userPage, entityWrapper);

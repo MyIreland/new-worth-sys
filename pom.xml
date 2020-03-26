@@ -22,10 +22,6 @@
             <artifactId>worth-oauth2</artifactId>
             <version>${worth-oauth2.version}</version>
         </dependency>
-        <dependency>
-            <groupId>cn.worth</groupId>
-            <artifactId>worth-redis</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
