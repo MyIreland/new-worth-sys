@@ -5,7 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan({"cn.worth.**"})
 @MapperScan("cn.worth.**.mapper")
 @SpringBootApplication
 public class SysApplication {

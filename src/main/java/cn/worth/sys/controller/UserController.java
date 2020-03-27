@@ -5,8 +5,7 @@ import cn.worth.common.constant.CommonConstant;
 import cn.worth.common.domain.R;
 import cn.worth.common.utils.StringUtils;
 import cn.worth.core.domain.LoginUser;
-import cn.worth.mysql.controller.BaseController;
-import cn.worth.redis.utils.RedisClient;
+import cn.worth.springboot.starter.druid.controller.BaseController;
 import cn.worth.sys.domain.User;
 import cn.worth.sys.pojo.UserPojo;
 import cn.worth.sys.service.IRoleService;
@@ -38,7 +37,6 @@ public class UserController extends BaseController<IUserService, User> {
     @PostMapping("/page")
     public R page(Page<User> userPage, User user, @CurrentUser LoginUser loginUser) {
         QueryWrapper<User> entityWrapper = getUserEntityWrapper(user, loginUser);
-
         Page<User> page = userService.page(userPage, entityWrapper);
         return R.success(page);
     }

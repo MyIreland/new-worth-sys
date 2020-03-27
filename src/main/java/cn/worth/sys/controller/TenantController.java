@@ -5,7 +5,7 @@ import cn.worth.common.constant.CommonConstant;
 import cn.worth.common.domain.R;
 import cn.worth.common.utils.StringUtils;
 import cn.worth.core.domain.LoginUser;
-import cn.worth.mysql.controller.BaseController;
+import cn.worth.springboot.starter.druid.controller.BaseController;
 import cn.worth.sys.domain.Tenant;
 import cn.worth.sys.service.ITenantService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

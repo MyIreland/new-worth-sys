@@ -2,7 +2,7 @@ package cn.worth.sys.controller;
 
 import cn.worth.common.constant.CommonConstant;
 import cn.worth.common.domain.R;
-import cn.worth.mysql.controller.BaseController;
+import cn.worth.springboot.starter.druid.controller.BaseController;
 import cn.worth.sys.domain.Dept;
 import cn.worth.sys.service.IDeptService;
 import org.springframework.beans.factory.annotation.Autowired;

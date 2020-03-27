@@ -6,7 +6,7 @@ import cn.worth.common.domain.R;
 import cn.worth.common.exception.BusinessException;
 import cn.worth.common.utils.StringUtils;
 import cn.worth.core.domain.LoginUser;
-import cn.worth.mysql.controller.BaseController;
+import cn.worth.springboot.starter.druid.controller.BaseController;
 import cn.worth.sys.domain.Role;
 import cn.worth.sys.service.IRoleService;
 import cn.worth.sys.utils.VerifyUtils;

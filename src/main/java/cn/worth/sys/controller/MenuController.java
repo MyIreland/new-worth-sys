@@ -4,7 +4,7 @@ import cn.worth.common.constant.CommonConstant;
 import cn.worth.common.domain.MenuTree;
 import cn.worth.common.domain.R;
 import cn.worth.common.utils.TreeUtils;
-import cn.worth.mysql.controller.BaseController;
+import cn.worth.springboot.starter.druid.controller.BaseController;
 import cn.worth.sys.domain.Menu;
 import cn.worth.sys.service.IMenuService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
